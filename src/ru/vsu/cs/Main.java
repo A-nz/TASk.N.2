@@ -10,7 +10,7 @@ public class Main {
         Point p2 = readPoint1("p2");
         Point p3 = readPoint1("p3");
         Point p4 = readPoint1("p4");
-        System.out.print(defineSquare(p1, p2, p3, p4));
+        System.out.print(isSquare(p1, p2, p3, p4));
     }
 
     private static Point readPoint1(String name) {
@@ -28,7 +28,7 @@ public class Main {
     }
 
 
-    private static boolean defineSquare (Point p1, Point p2, Point p3, Point p4)
+    private static boolean isSquare (Point p1, Point p2, Point p3, Point p4)
     {
         return     (foundDistance(p1, p2) == foundDistance(p2, p3))
                 && (foundDistance(p2, p3) == foundDistance(p3, p4))
@@ -43,5 +43,4 @@ public class Main {
         return  Math.sqrt((p1.x - p2.x) * (p1.x - p2.x) + (p1.y - p2.y) * (p1.y - p2.y));
     }
 }
-
 
